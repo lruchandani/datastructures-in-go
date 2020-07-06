@@ -69,3 +69,41 @@ func InsertionSort(arr []int, sortType Sort) {
 		arr[j] = v
 	}
 }
+
+//QuickSort Function
+func QuickSort(arr []int, sortType Sort) {
+	quickSort(arr, 0, len(arr)-1)
+}
+
+func quickSort(arr []int, start int, end int) {
+	if start > end {
+		return
+	}
+	mid := findMid(arr, start, end)
+	quickSort(arr, start, mid-1)
+	quickSort(arr, mid+1, end)
+}
+
+func findMid(arr []int, start int, end int) int {
+	if end < start {
+		return start
+	}
+	v := arr[end]
+	startPos, endPos := start, end-1
+	for startPos <= endPos {
+		if arr[startPos] > v {
+			swap(arr, startPos, endPos)
+			endPos--
+		} else {
+			startPos++
+		}
+	}
+	swap(arr, startPos, end)
+	return startPos
+}
+
+func swap(arr []int, i int, j int) {
+	t := arr[i]
+	arr[i] = arr[j]
+	arr[j] = t
+}
