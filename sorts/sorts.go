@@ -51,3 +51,21 @@ func BubbleSort(arr []int, sortType Sort) {
 		}
 	}
 }
+
+// InsertionSort function
+func InsertionSort(arr []int, sortType Sort) {
+	for i := 1; i < len(arr); i++ {
+		v := arr[i]
+		j := i
+		if sortType == ASC {
+			for ; j >= 1 && arr[j-1] > v; j-- {
+				arr[j] = arr[j-1]
+			}
+		} else {
+			for ; j >= 1 && arr[j-1] < v; j-- {
+				arr[j] = arr[j-1]
+			}
+		}
+		arr[j] = v
+	}
+}

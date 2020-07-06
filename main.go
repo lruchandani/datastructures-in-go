@@ -24,7 +24,8 @@ func main() {
 		fmt.Println("Selection Sort (DSC) = 2")
 		fmt.Println("Bubble Sort (ASC) = 3")
 		fmt.Println("Bubble Sort (DESC) = 4")
-		fmt.Println("Exit : 5")
+		fmt.Println("InsertionSort Sort = 5")
+		fmt.Println("Exit : Anything else")
 		fmt.Println("Choose Input type :")
 		var choice = 0
 		fmt.Scanf("%d", &choice)
@@ -37,6 +38,8 @@ func main() {
 			sortMethod(sorts.BubbleSort, takeInput(), sorts.ASC)
 		case 4:
 			sortMethod(sorts.BubbleSort, takeInput(), sorts.DESC)
+		case 5:
+			sortMethod(sorts.InsertionSort, takeInput(), sorts.DESC)
 		default:
 			return
 		}
