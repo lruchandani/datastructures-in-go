@@ -1,6 +1,9 @@
 package queue
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 //Node struct
 type Node struct {
@@ -40,4 +43,17 @@ func (queue *MyQueue) Print() {
 		h = (*h).next
 	}
 	fmt.Println()
+}
+
+//Remove Element
+func (queue *MyQueue) Remove() (int, error) {
+	if queue.size == 0 {
+		e := errors.New("Queue is empty")
+		return 0, e
+	}
+
+	n := (*queue.head).element
+	queue.head = (*queue.head).next
+	queue.size--
+	return n, nil
 }

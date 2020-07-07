@@ -41,9 +41,12 @@ func queuing() {
 	q := queue.MyQueue{}
 
 	for {
+		fmt.Println()
+		fmt.Println("-------Queue Ops ---------")
 		fmt.Println("Add to Queue = 1")
 		fmt.Println("Print Queue = 2")
 		fmt.Println("Size Queue = 3")
+		fmt.Println("Remove Element = 4")
 		var choice = 0
 		fmt.Scanf("%d", &choice)
 		switch choice {
@@ -56,6 +59,13 @@ func queuing() {
 			q.Print()
 		case 3:
 			fmt.Print("Size is ", q.Size())
+		case 4:
+			i, e := q.Remove()
+			if e == nil {
+				fmt.Print("Element is :", i)
+			} else {
+				fmt.Println(e)
+			}
 		default:
 			fmt.Print("Inavlid Choice")
 			return
