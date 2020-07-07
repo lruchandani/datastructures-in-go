@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	queue "github.com/lruchandani/datastructures-in-go/queues"
 	"github.com/lruchandani/datastructures-in-go/sorts"
 )
 
@@ -19,6 +20,50 @@ func takeInput() []int {
 }
 
 func main() {
+	for {
+		fmt.Println("Sorting = 1")
+		fmt.Println("Queue = 2")
+		var choice = 0
+		fmt.Scanf("%d", &choice)
+		switch choice {
+		case 1:
+			sorting()
+		case 2:
+			queuing()
+		default:
+			fmt.Print("Invalid Choice ", choice)
+			return
+		}
+	}
+}
+
+func queuing() {
+	q := queue.MyQueue{}
+
+	for {
+		fmt.Println("Add to Queue = 1")
+		fmt.Println("Print Queue = 2")
+		fmt.Println("Size Queue = 3")
+		var choice = 0
+		fmt.Scanf("%d", &choice)
+		switch choice {
+		case 1:
+			fmt.Println("Enter element to add:")
+			var e = 0
+			fmt.Scan(&e)
+			q.Add(e)
+		case 2:
+			q.Print()
+		case 3:
+			fmt.Print("Size is ", q.Size())
+		default:
+			fmt.Print("Inavlid Choice")
+			return
+
+		}
+	}
+}
+func sorting() {
 	for {
 		fmt.Println("Selection Sort (ASC) = 1")
 		fmt.Println("Selection Sort (DSC) = 2")
