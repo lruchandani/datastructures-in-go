@@ -1,0 +1,74 @@
+[
+    {
+        "brand": {
+            "brand_displayable": true,
+            "code": "NKSM",
+            "control_brand": false,
+            "name_en": "Nat kosher",
+            "name_fr": ""
+        },
+        "data": {
+            "color_code": "",
+            "comparison_unit": 100,
+            "comparison_uom": "G",
+            "conversion_factor": 1,
+            "country": "US",
+            "dietary_callouts": {},
+            "height": 2,
+            "item_size": 340,
+            "item_size_uom": "G",
+            "items_per_package": 1,
+            "length": 24,
+            "max_order_quantity": 999,
+            "min_order_quantity": 1,
+            "name_en": "NAT KSHR CHZ SLCD VAR PK",
+            "name_fr": "NATURAL KOSHER FROMAGE TRANCHE",
+            "restricted_pickup_types": [
+                "STORE",
+                "TRUCK"
+            ],
+            "size_code": "",
+            "sold_by_unit": 1,
+            "unit_of_lwh": "CM",
+            "upc": "651219209304",
+            "volume": 864,
+            "weight": 0.34,
+            "width": 18
+        },
+        "inserted_at": "2019-10-18T07:31:59",
+        "liam": "{{.liam}}_EA",
+        "model_version": "v1",
+        "new_product_date": "2020-02-06",
+        "nutrition": {
+            "recipes": [
+                {
+                    "description": {},
+                    "ingredients": {},
+                    "nutrients": {}
+                }
+            ]
+        },
+        "status": "APPROVED",
+        "taxonomy": {
+            "hierarchy_codes": [
+                "LCL",
+                "LOBLAW",
+                "M10220101",
+                "234673",
+                "237529",
+                "241084"
+            ],
+            "hierarchy_strings": [
+                "LCL",
+                "LOBLAW",
+                "Cheese",
+                "Natural Cheese",
+                "Slice",
+                "Regular"
+            ]
+        },
+        "uom": "EA",
+        "updated_at": "2020-02-06T14:23:07",
+        "version": 200326999999
+    }
+]

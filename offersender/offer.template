@@ -1,0 +1,107 @@
+[
+    {
+        "fees": {
+            "carbon": 54,
+            "deposit": 50,
+            "ecology": 32,
+            "electronic": 2,
+            "hazardous": 1
+        },
+        "id": {{.offerId}},
+        "liam": "{{.liam}}_EA",
+        "prices": [
+            {
+                "type": "REGULAR",
+                "valid_from": "2020-01-14T00:00:00Z",
+                "valid_to": "9999-12-31T00:00:00Z",
+                "value": {{index .price 0}},
+                "version": 200413143342
+            },
+            {
+                "type": "SPECIAL",
+                "valid_from": "2020-04-23T00:00:00Z",
+                "valid_to": "2020-05-13T00:00:00Z",
+                "value": {{index .price 1}},
+                "version": 200421221120
+            }
+        ],
+        "product": {
+            "attributes": {
+                "comparison_unit": 100,
+                "comparison_uom": "G",
+                "item_size": 85,
+                "item_size_uom": "G",
+                "items_per_package": 1,
+                "upc": "065000008906",
+                "volume": 166.093
+            },
+            "brand": {
+                "brand_displayable": true,
+                "code": "FFST",
+                "control_brand": false,
+                "name_en": "Fancy Feast",
+                "name_fr": ""
+            },
+            "classification_attributes": [],
+            "dietary_callouts": [],
+            "inserted_at": "2019-10-16T14:26:02",
+            "liam": "20707923_EA",
+            "model_version": "v2",
+            "name_en": "FANCY FEAST GRVLVRS CHICKEN",
+            "name_fr": "FANCY FEAST NOURR POULET SAUCE",
+            "status": "PENDING",
+            "taxonomy": {
+                "hierarchy_codes": [
+                    "LCL",
+                    "LOBLAW",
+                    "M10211301",
+                    "234602",
+                    "237481",
+                    "241018"
+                ],
+                "hierarchy_strings": [
+                    "LCL",
+                    "LOBLAW",
+                    "Cat Food",
+                    "Cat Food",
+                    "Wet Food",
+                    "Premium"
+                ]
+            },
+            "uom": "EA",
+            "updated_at": "{{.updated_at}}",
+            "version": 200326999999
+        },
+        "promotions": [
+            {
+                "data": {
+                    "promo_num": "000002683701",
+                    "quantity": 5,
+                    "value": 70
+                },
+                "type": 3,
+                "valid_from": "2020-01-14T00:00:00Z",
+                "valid_to": "9999-12-31T00:00:00Z",
+                "version": 200409143022
+            }
+        ],
+        "sku": "{{.liam}}",
+        "taxes": {
+            "gst": false,
+            "gst_exempt_tax_flag": "",
+            "hst": true,
+            "ppft": false,
+            "prepared_food_tax_type": "N",
+            "pst": false,
+            "spft": false
+        },
+        "valid_from": "2013-07-03T00:00:00Z",
+        "valid_to": "9999-12-31T00:00:00Z",
+        "vendor": {
+            "banner": "loblaw",
+            "store_id": "{{.storeId}}"
+        },
+        "version": {{.version}},
+        "was_price": {{.wasPrice}}
+    }
+]
