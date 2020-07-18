@@ -26,12 +26,16 @@ func NewProduct(productID string) *Product {
 //ToJSON -convert offer to offer Json
 func (product *Product) ToJSON() string {
 	buf := &bytes.Buffer{}
-	productTemplate.Execute(buf, map[string]interface{}{"liam": product.liam})
+	productTemplate.Execute(buf, map[string]interface{}{"liam": product.liam, "updated_at": product.updatedAt})
 	return buf.String()
 }
 
 //LoadProducts - load products
-func LoadProducts() ([]string, error) {
-	products, err := common.LoadFile("products.txt")
+func LoadProducts(folder string) ([]string, error) {
+	file := folder + "/" + "products.txt"
+	products, err := common.LoadFile(file)
+	if err != nil {
+		panic(err)
+	}
 	return products, err
 }

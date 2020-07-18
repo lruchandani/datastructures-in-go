@@ -68,7 +68,7 @@
             ]
         },
         "uom": "EA",
-        "updated_at": "2020-02-06T14:23:07",
+        "updated_at": "{{.updated_at}}",
         "version": 200326999999
     }
 ]

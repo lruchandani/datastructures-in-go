@@ -50,7 +50,10 @@ func (offer *Offer) ToJSON() string {
 }
 
 //LoadStores - load stores
-func LoadStores() ([]string, error) {
-	stores, err := common.LoadFile("stores.txt")
+func LoadStores(folder string) ([]string, error) {
+	stores, err := common.LoadFile(folder + "/" + "stores.txt")
+	if err != nil {
+		panic(err)
+	}
 	return stores, err
 }
