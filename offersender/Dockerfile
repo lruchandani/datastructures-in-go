@@ -2,4 +2,4 @@ FROM  alpine
 COPY ./bin ./product.template ./offer.template  /
 VOLUME [ "/keys","/source" ]
 ENV GOOGLE_APPLICATION_CREDENTIALS=/keys/key.json
-CMD /offersender -publish-to=$DESTINATION -batch-number=$BATCHNUMBER -batch-size=$BATCHSIZE -project-id=$PROJECTID -concurrent-requests=$CONCURRENCY -source-file-path=/source
+CMD /offersender -project-id=$PROJECT -publish-to=$DESTINATION -batch-number=$BATCHNUMBER -batch-size=$BATCHSIZE -project-id=$PROJECTID -concurrent-requests=$CONCURRENCY -source-file-path=/source
