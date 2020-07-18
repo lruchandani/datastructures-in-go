@@ -26,7 +26,7 @@ echo "no of batches $noOfbatches"
 for ((i=0;i<$(( $noOfbatches ));i++)); 
 do 
 name="offersender-$i"
-echo "sudo docker run --rm -v $key_path:/keys/key.json -v $source_path:/source -e PROJECT=$project -e DESTINATION=$publishto -e BATCHNUMBER=$i -e BATCHSIZE=$batch_size -e CONCURRENCY=$batch_size --n $name lruchandani/offersender"
-sudo docker run --rm -v $key_path:/keys/key.json -v $source_path:/source -e PROJECT=$project -e DESTINATION=$publishto -e BATCHNUMBER=$i -e BATCHSIZE=$batch_size -e CONCURRENCY=$batch_size --n $name lruchandani/offersender
+echo "sudo docker run --rm -d -v $key_path:/keys/key.json -v $source_path:/source -e PROJECT=$project -e DESTINATION=$publishto -e BATCHNUMBER=$i -e BATCHSIZE=$batch_size -e CONCURRENCY=$batch_size --n $name lruchandani/offersender"
+sudo docker run --rm -d -v $key_path:/keys/key.json -v $source_path:/source -e PROJECT=$project -e DESTINATION=$publishto -e BATCHNUMBER=$i -e BATCHSIZE=$batch_size -e CONCURRENCY=$batch_size --n $name lruchandani/offersender
 echo "Started $name"
 done
